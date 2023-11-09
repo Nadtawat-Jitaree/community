@@ -13,7 +13,7 @@
     <title>สมัครสมาชิก | PUANJ</title>
 </head>
 <body>
-<section class="vh-100" style="background-color: #9A616D;">
+<section class="vh-10" style="background-color: #9A616D;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -70,13 +70,9 @@
                   <div class="pt-1 mb-2">
                     <input class="btn btn-dark btn-lg btn-block" type="submit" name="submit" value="สมัครสมาชิก">
                   </div>
-
-                  <p class="mb-5 pb-lg-2" style="color: #393f81;">คุณมีบัญชีผู้ใช้แล้วใช่ไหม? <a href="login.php"
+                  <p class="mb-0 pb-lg-2" style="color: #393f81;">คุณมีบัญชีผู้ใช้แล้วใช่ไหม? <a href="login.php"
                       style="color: #393f81;">เข้าสู่ระบบ</a></p>
-                  <a href="#!" class="small text-muted">puanj</a>
-                  <a href="#!" class="small text-muted">make by Nadtawat Jitaree</a>
                 </form>
-
               </div>
             </div>
           </div>

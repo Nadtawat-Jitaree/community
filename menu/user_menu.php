@@ -21,7 +21,14 @@
           <a class="nav-link active" aria-current="page" href="post.php">โพสต์</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="friends.php">เพื่อนของคุณ</a>
+          <?php 
+            require('./db/db.php');
+            $username = $_SESSION['username'];
+            $sql = "SELECT * FROM friends WHERE username='$username' AND verify='รอรับคำขอ'";
+            $query = mysqli_query($conn,$sql);
+            $num = mysqli_num_rows($query);
+          ?>
+          <a class="nav-link" href="friends_verify.php">คำขอเป็นเพื่อน<span style="color: orange;">[<?php echo $num?>]</span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,7 +50,7 @@
             $rows=mysqli_fetch_assoc($query);
             $role=$rows['role'];
           ?>
-          <a class="nav-link disabled" aria-disabled="true"><?php echo $_SESSION['username']." "."[$role]"?></a>
+          <a href="profile.php" class="nav-link" aria-disabled="true"><?php echo $_SESSION['username']." "."[$role]"?></a>
         </li>
       </ul>
       <form class="d-flex" role="search">
